@@ -1,0 +1,24 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[[project.authors]]
+name = "Zenthm"
+email = "zenthm.dev@gmail.com"
+
+[project]
+name = "vorcle"
+dynamic = ["version"]
+description = "The Python library for game development."
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+
+[tool.pdm]
+package-type = "library"
+
+[tool.pdm.version]
+source = "scm"
+write_to = "vorcle/_version.py"
+write_template = "version = '{}'"
